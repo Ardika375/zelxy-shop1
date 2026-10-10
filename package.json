@@ -1,0 +1,16 @@
+{
+  "name": "zelxy-shop-netlify-only",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "check": "node --check netlify/functions/lib.mjs && node --check netlify/functions/create-order.mjs && node --check netlify/functions/order-status.mjs && node --check netlify/functions/submit-proof.mjs && node --check netlify/functions/admin-import-stock.mjs && node --check netlify/functions/telegram-webhook.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^23.0.0"
+  }
+}
